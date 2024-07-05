@@ -1,1 +1,3 @@
 # 24T2 COMP2511 Notes
+
+Hi
