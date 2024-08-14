@@ -21,6 +21,18 @@ So an Invoker is going to store a command object. For example, a copy button sto
 
 When an Invoker invokes the command, the command object will tell the receiver to do its job. In our text editor example, the Copy command will tell the text editor to do the copy operation.
 
+# Pros
+
+- Adheres to Single Responsibility Principle, because we can decouple classes that invoke the operation from classes that perform the operation.
+
+  - For example: Buttons (invoker) does not know how to implement any specific command. The implementation of commands are done by the TV (receiver).
+
+- Open/closed Principle: We can introduce new command without modifying the invoker.
+
+  - For example: When we wanna add a turn off command, we don't need to touch the button class (invoker).
+
+- We can implement undo/redo.
+
 # Implementation
 
 Let's follow (this)[https://www.newthinktank.com/2012/09/command-design-pattern-tutorial/].
